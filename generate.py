@@ -4,8 +4,8 @@ import sys
 
 _, name, m, n, p = sys.argv
 
-M = np.random.rand(int(m), int(n))
-N = np.random.rand(int(n), int(p))
+M = np.random.randint(9, size=(int(m), int(n)))
+N = np.random.randint(9, size=(int(n), int(p)))
 
 f = open(name, 'w')
 f.write('%s %s%s' % (m, n, '\n'))
