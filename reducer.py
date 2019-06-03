@@ -10,7 +10,7 @@ for line in fileinput.input():
     key, data = line.split()
     l, j, val = data.split(',')
     j = int(j)
-    val = float(val)
+    val = int(val)
 
     if l == 'M':
         if key in Mlist.keys():

@@ -15,13 +15,13 @@ for pos, line in enumerate(fileinput.input()):
         assert Mc == Nr
     elif pos <= (2 + Mr - 1):
         i = pos - 2
-        cols = map(float, line.split())
+        cols = map(int, line.split())
         for j, m in enumerate(cols):
             for k in range(0, Nc):
                 print("%s,%s %s,%s,%s" % (i, k, 'M', j, m))
     else:
         j = pos - 2 - Mr
-        cols = map(float, line.split())
+        cols = map(int, line.split())
         for k, n in enumerate(cols):
             for i in range(0, Mr):
                 print("%s,%s %s,%s,%s" % (i, k, 'N', j, n))
